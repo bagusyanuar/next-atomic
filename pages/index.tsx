@@ -1,11 +1,9 @@
-import { NavbarLink } from '@/components/atoms/link'
-import { NavbarButton } from '@/components/atoms/button'
+import Navbar from '@/components/organisms/navbar'
 
 export default function Home() {
   return (
     <main>
-      <NavbarLink text='Link' to='#' />
-      <NavbarButton icon='bx-user' />
+      <Navbar />
     </main>
   );
 }

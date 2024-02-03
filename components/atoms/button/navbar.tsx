@@ -30,13 +30,17 @@ const SNavbarButton = styled.a`
     cursor: pointer;
     text-decoration: none;
     color: var(--text-dark);
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
+
+    i {
+        font-size: 1em;
+    }
 
     &:hover {
         background-color: rgba(220, 220, 220, 0.3)
