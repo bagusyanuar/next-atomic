@@ -1,9 +1,11 @@
-import Navbar from '@/components/organisms/navbar'
+import Layout from '@/components/templates/layout'
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Layout>
+        <div></div>
+      </Layout>
     </main>
   );
 }

@@ -5,10 +5,13 @@ import { NavbarButton } from '@/components/atoms/button'
 import { NavbarBrand, NavbarLink } from '@/components/atoms/link'
 import { NavbarMenu, NavbarAction } from '@/components/molecules/navbar'
 
-const Navbar = () => {
+interface IProps { onTriggerClick?: () => void }
+const Navbar = ({
+    onTriggerClick = () => { }
+}: IProps) => {
     return (
         <NavbarWrapper>
-            <NavbarButton icon='bx-menu' className='sidebar-trigger' />
+            <NavbarButton icon='bx-menu' className='sidebar-trigger' onClick={onTriggerClick} />
             <NavbarBrand image='/assets/icons/brand.png' to='/' />
             <NavbarMenu>
                 <NavbarLink text='PRODUCT' to='/product' />
