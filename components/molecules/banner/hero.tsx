@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { SlickItem, SlickWrapper, SlickArrowNext, SlickArrowPrev } from '@/components/atoms/slick'
 
 interface IProps { className?: string }
@@ -16,14 +17,10 @@ const BannerHero = ({ className = '' }: IProps) => {
     return (
         <SlickWrapper settings={settings} className={className}>
             <SlickItem>
-                <div className='w-full h-full bg-gray-500 flex items-center justify-center'>
-                    <p className='text-white'>SLIDER 1</p>
-                </div>
+                <Image src='/assets/banner/banner-sample-1.jpg' height={500} width={1250} alt='banner-image' />
             </SlickItem>
             <SlickItem>
-                <div className='w-full h-full bg-gray-500 flex items-center justify-center'>
-                    <p className='text-white'>SLIDER 2</p>
-                </div>
+                <Image src='/assets/banner/banner-sample-2.jpg' height={500} width={1250} alt='banner-image' />
             </SlickItem>
         </SlickWrapper>
     )
