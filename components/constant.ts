@@ -1,0 +1,1 @@
+export const SlickRatio = '4 / 2'
