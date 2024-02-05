@@ -17,10 +17,10 @@ const BannerHero = ({ className = '' }: IProps) => {
     return (
         <SlickWrapper settings={settings} className={className}>
             <SlickItem>
-                <Image src='/assets/banner/banner-sample-1.jpg' height={500} width={1250} alt='banner-image' />
+                <Image src='/assets/banner/banner-sample-1.jpg' height={500} width={1250} alt='banner-image' priority />
             </SlickItem>
             <SlickItem>
-                <Image src='/assets/banner/banner-sample-2.jpg' height={500} width={1250} alt='banner-image' />
+                <Image src='/assets/banner/banner-sample-2.jpg' height={500} width={1250} alt='banner-image' priority />
             </SlickItem>
         </SlickWrapper>
     )

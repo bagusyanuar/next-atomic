@@ -17,4 +17,8 @@ export default NavbarBrand
 const SNavbarBrand = styled.a`
     cursor: pointer;
     text-decoration: none;
+
+    img {
+        width: 50px;
+    }
 `
