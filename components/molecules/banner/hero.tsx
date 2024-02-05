@@ -5,7 +5,8 @@ import { SlickItem, SlickWrapper, SlickArrowNext, SlickArrowPrev } from '@/compo
 interface IProps { className?: string }
 const BannerHero = ({ className = '' }: IProps) => {
     const settings = {
-        dots: true,
+        dots: false,
+        arrows: false,
         autoplay: true,
         infinite: true,
         speed: 500,

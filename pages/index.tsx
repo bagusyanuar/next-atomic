@@ -2,6 +2,7 @@ import Layout from '@/components/templates/layout'
 import { BannerHero } from '@/components/molecules/banner'
 import Categories from '@/components/organisms/categories'
 import Technologies from '@/components/organisms/technologies'
+import BestSeller from '@/components/organisms/best.seller'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <BannerHero className='mb-10'/>
         <Categories />
         <Technologies />
-        <div></div>
+        <BestSeller />
       </Layout>
     </main>
   );

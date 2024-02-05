@@ -11,7 +11,9 @@ const CategoryCard = ({
 }: IProps) => {
     return (
         <SCategoryCard className={className}>
-            <Image src={image} height={120} width={120} alt='image-category' priority />
+            <div className='image-wrapper'>
+                <Image src={image} height={80} width={80} alt='image-category' priority />
+            </div>
             <p className='title'>{text}</p>
         </SCategoryCard>
     )
@@ -21,33 +23,44 @@ export default CategoryCard
 
 const SCategoryCard = styled.div`
     cursor: pointer;
+    padding: 5px 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 170px;
+    height: 140px;
     width: 140px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-    img {
-        height: 120px;
+    .image-wrapper {
         width: 100%;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 10px;
-        margin-bottom: 10px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 60px;
+            width: 60px;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 10px;
+        }
     }
+    
 
     .title {
         color: var(--text-dark);
-        font-size: ${fontSize.normal};
+        font-size: ${fontSize.small};
         font-weight: 600;
-        height: 40px;
+        height: 33px;
         text-align: center;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+        line-height: 1.2;
     }
 `

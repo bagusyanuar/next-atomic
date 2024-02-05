@@ -10,6 +10,9 @@ const Categories = ({ className = '' }: IProps) => {
             <CategoryCard image='/assets/categories/category-1.png' text='Category 1' />
             <CategoryCard image='/assets/categories/category-2.png' text='Category 2' />
             <CategoryCard image='/assets/categories/category-3.png' text='Category 3' />
+            <CategoryCard image='/assets/categories/category-4.png' text='Category 4' />
+            <CategoryCard image='/assets/categories/category-5.png' text='Category 5' />
+            <CategoryCard image='/assets/categories/category-6.png' text='Category 6' />
         </Wrapper>
     )
 }
@@ -21,5 +24,5 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1.25rem;
 `

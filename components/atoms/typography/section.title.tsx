@@ -15,7 +15,7 @@ export default SectionTitle
 
 const SSectionTitle = styled.h1`
     color: var(--primary-color);
-    font-size: ${fontSize.extraLarge};
+    font-size: ${fontSize.large};
     font-weight: 600;
     text-align: center;
 `
