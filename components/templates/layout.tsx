@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '@/components/organisms/navbar'
 import Sidebar from '@/components/organisms/sidebar'
 import styled from 'styled-components'
+import { device } from '@/components/media'
 
 interface IProps { children: React.ReactNode }
 
@@ -27,5 +28,9 @@ export default Layout
 
 const ContentWrapper = styled.div`
     min-height: 550px;
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
+
+    @media ${device.tablet} {
+        padding: 1rem 5rem;
+    }
 `

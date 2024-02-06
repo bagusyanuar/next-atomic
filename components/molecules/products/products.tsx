@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ProductCard } from '@/components/atoms/card'
+import { device } from '@/components/media'
 
 interface IProps { className?: string }
 const Products = ({ className = '' }: IProps) => {
@@ -30,12 +31,21 @@ const Products = ({ className = '' }: IProps) => {
             rate: 5,
             sold: 8
         },
+        {
+            image: '/assets/product/sample-4.jpg',
+            name: 'Product 3',
+            price: 75000,
+            agents: ['Surakarta', 'Jogja'],
+            rate: 3.5,
+            sold: 15
+        },
     ]
     return (
         <Wrapper>
             <ProductCard data={dummyData[0]} />
             <ProductCard data={dummyData[1]} />
             <ProductCard data={dummyData[2]} />
+            <ProductCard data={dummyData[3]} />
         </Wrapper>
     )
 }
@@ -47,5 +57,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    gap: 0.75rem;
+
+    @media ${device.tablet} {
+        gap: 1.25rem;
+    }
 `

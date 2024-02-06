@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { fontSize } from '@/components/constant'
+import { device } from '@/components/media'
 
 type TProduct = {
     image: string
@@ -52,41 +53,61 @@ const SProductCard = styled.div`
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 200px;
-    height: 320px;
+    width: 160px;
+    height: 250px;
     align-items: center;
     justify-content: start;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
+    @media ${device.tablet} {
+        width: 200px;
+        height: 320px;
+    }
+
     img {
         width: 100%;
         height: 0px;
-        flex: 3;
+        flex: 5;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
         object-fit: cover;
         object-position: center center;
+
+        @media ${device.tablet} {
+            flex: 3;
+        }
     }
 
     .description {
-        flex: 2;
+        flex: 4;
         width: 100%;
         height: 100%;
         padding: 0.1rem 0.5rem;
 
+        @media ${device.tablet} {
+            flex: 2;
+        }
         .name {
             margin-bottom: 0;
             font-weight: 500;
-            font-size: ${fontSize.small};
+            font-size: 0.7em;
             color: var(--text-dark);
+
+            @media ${device.tablet} {
+                font-size: ${fontSize.small};
+            }
         }
 
         .price {
             margin-bottom: 0.25rem;
-            font-size: ${fontSize.normal};
+            font-size: 0.9em;
             font-weight: 600;
             color: var(--primary-color);
+
+            @media ${device.tablet} {
+                font-size: ${fontSize.normal};
+            }
         }
 
         .location-wrapper {
@@ -125,12 +146,20 @@ const SProductCard = styled.div`
             span {
                 margin-left: 0.25rem;
                 margin-right: 0.25rem;
-                font-size: 0.7em;
+                font-size: 0.6em;
+
+                @media ${device.tablet} {
+                    font-size: 0.7em;
+                }
             }
 
             p {
                 margin-bottom: 0;
-                font-size: 0.7em;
+                font-size: 0.6em;
+
+                @media ${device.tablet} {
+                    font-size: 0.7em;
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { fontSize } from '@/components/constant'
+import { device } from '@/components/media'
 
 interface IProps { text: string, className?: string }
 const SectionTitle = ({ text, className = '' }: IProps) => {
@@ -15,7 +16,11 @@ export default SectionTitle
 
 const SSectionTitle = styled.h1`
     color: var(--primary-color);
-    font-size: ${fontSize.large};
+    font-size: ${fontSize.normal};
     font-weight: 600;
     text-align: center;
+
+    @media ${device.tablet} {
+        font-size: ${fontSize.large};
+    }
 `

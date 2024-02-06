@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { TechnologyCard } from '@/components/atoms/card'
+import { device } from '@/components/media'
 
 const Technologies = () => {
     return (
@@ -17,7 +18,13 @@ export default Technologies
 
 const Wrapper = styled.div`
     width: 100%;
-    display: grid;
-    gap: 0.75rem;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    @media ${device.tablet} {
+        gap: 1.25rem;
+    }
 `

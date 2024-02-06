@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { fontSize } from '@/components/constant'
+import { device } from '@/components/media'
 
 interface IProps { image: string, text: string, className?: string }
 const CategoryCard = ({
@@ -28,10 +29,15 @@ const SCategoryCard = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
-    width: 140px;
+    height: 90px;
+    width: 90px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    @media ${device.tablet} {
+        height: 140px;
+        width: 140px;
+    }
 
     .image-wrapper {
         width: 100%;
@@ -41,20 +47,25 @@ const SCategoryCard = styled.div`
         justify-content: center;
 
         img {
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             object-fit: contain;
             object-position: center;
             border-radius: 10px;
+
+            @media ${device.tablet} {
+                height: 60px;
+                width: 60px;
+            }
         }
     }
     
 
     .title {
         color: var(--text-dark);
-        font-size: ${fontSize.small};
+        font-size: ${fontSize.extraSmall};
         font-weight: 600;
-        height: 33px;
+        height: 24px;
         text-align: center;
         overflow: hidden;
         display: -webkit-box;
@@ -62,5 +73,10 @@ const SCategoryCard = styled.div`
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         line-height: 1.2;
+
+        @media ${device.tablet} {
+            font-size: ${fontSize.small};
+            height: 33px;
+        }
     }
 `
