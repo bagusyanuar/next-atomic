@@ -6,17 +6,16 @@ const Testimonials = () => {
     const settings = {
         className: "center",
         centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500
+        slidesToShow: 1,
+        speed: 500,
+        variableWidth: true
     };
     return (
         <div>
             <Slider {...settings}>
-                <TestimonialCard />
-                <TestimonialCard />
-                <TestimonialCard />
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-1.png', description: '', name: ''}}/>
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-2.png', description: '', name: ''}}/>
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-3.png', description: '', name: ''}}/>
             </Slider>
         </div>
     )
