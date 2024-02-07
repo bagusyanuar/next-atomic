@@ -8,14 +8,16 @@ const Testimonials = () => {
         centerMode: true,
         slidesToShow: 1,
         speed: 500,
-        variableWidth: true
+        variableWidth: true,
+        autoplay: true,
+        arrows: false,
     };
     return (
         <div>
             <Slider {...settings}>
-                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-1.png', description: '', name: ''}}/>
-                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-2.png', description: '', name: ''}}/>
-                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-3.png', description: '', name: ''}}/>
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-1.png', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', name: 'Johnny Abs'}}/>
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-2.png', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', name: 'Wolfmother'}}/>
+                <TestimonialCard data={{ avatar: '/assets/avatar/avatar-3.png', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', name: 'Holygrail'}}/>
             </Slider>
         </div>
     )

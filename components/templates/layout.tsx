@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '@/components/organisms/navbar'
 import Sidebar from '@/components/organisms/sidebar'
+import Footer from '@/components/organisms/footer'
 import styled from 'styled-components'
 import { device } from '@/components/media'
 
@@ -20,6 +21,7 @@ function Layout({ children }: IProps) {
             <ContentWrapper>
                 {children}
             </ContentWrapper>
+            <Footer />
         </main>
     )
 }
