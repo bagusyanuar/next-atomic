@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { TechnologyCard } from '@/components/atoms/card'
 import { device } from '@/components/media'
 
-const Technologies = () => {
+interface IProps { className?: string }
+
+const Technologies = ({ className = '' }: IProps) => {
     return (
-        <Wrapper>
+        <Wrapper className={className}>
             <TechnologyCard icon='/assets/technologies/award.png' title='SNI' description='Yuspin bukan obat dan bukan makanan maka tidak memerlukan BPOM/depkes  Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.' />
             <TechnologyCard icon='/assets/technologies/microscope.png' title='Labolatorium Tested' description='Yuspin telah melalui uji klinis laboratorium sesuai uji SNI' />
             <TechnologyCard icon='/assets/technologies/flask.png' title='Bebas Klorin' description='Bahan baku Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.' />

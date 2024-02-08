@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionTitle, SectionSubTitle } from '@/components/atoms/typography'
-import { TestimonialsCard } from '@/components/molecules/testimonials'
+import { Testimonials } from '@/components/molecules/modules/home'
 import { device } from '@/components/media'
 
-const Testimonials = () => {
+interface IProps { className?: string }
+
+const TestimonialsSection = ({ className = '' }: IProps) => {
     return (
-        <StyledWrapper>
+        <StyledWrapper className={className}>
             <SectionTitle text='TESTIMONI' className='mb-1' />
             <StyledSectionSubTitle text='Testimoni para pengguna kepada produk kami' />
-            <TestimonialsCard />
+            <Testimonials />
         </StyledWrapper>
     )
 }
 
-export default Testimonials
+export default TestimonialsSection
 
 const StyledWrapper = styled.div`
     margin-bottom: 1rem;

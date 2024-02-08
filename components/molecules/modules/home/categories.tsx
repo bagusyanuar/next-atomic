@@ -30,5 +30,4 @@ const Wrapper = styled.div`
     @media ${device.tablet} {
         gap: 1.25rem;
     }
-
 `

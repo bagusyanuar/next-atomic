@@ -18,21 +18,10 @@ function Layout({ children }: IProps) {
         <main>
             <Navbar onTriggerClick={handleTriggerClick} />
             <Sidebar show={showSidebar} onBackdropClick={handleTriggerClick} />
-            <ContentWrapper>
-                {children}
-            </ContentWrapper>
+            {children}
             <Footer />
         </main>
     )
 }
 
 export default Layout
-
-const ContentWrapper = styled.div`
-    min-height: 550px;
-    padding: 1rem 2rem;
-
-    @media ${device.tablet} {
-        padding: 1rem 5rem;
-    }
-`

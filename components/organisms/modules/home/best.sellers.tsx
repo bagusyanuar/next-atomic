@@ -1,20 +1,22 @@
 import React from 'react'
 import { SectionTitle, SectionSubTitle } from '@/components/atoms/typography'
-import { ProductsCard } from '@/components/molecules/products'
+import { BestSellers } from '@/components/molecules/modules/home'
 import { device } from '@/components/media'
 import styled from 'styled-components'
 
-function BestSeller() {
+interface IProps { className?: string }
+
+const BestSellersSection = ({ className = '' }: IProps) => {
     return (
-        <StyledWrapper>
+        <StyledWrapper className={className}>
             <SectionTitle text='BEST SELLER' className='mb-1' />
             <StyledSectionSubTitle text='Dapatkan produk - produk terbaik kami' />
-            <ProductsCard />
+            <BestSellers />
         </StyledWrapper>
     )
 }
 
-export default BestSeller
+export default BestSellersSection
 
 const StyledWrapper = styled.div`
     margin-bottom: 1rem;

@@ -51,10 +51,10 @@ export default ProductCard
 const SProductCard = styled.div`
     cursor: pointer;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
-    width: 160px;
-    height: 250px;
+    height: 160px;
+    width: 300px;
     align-items: center;
     justify-content: start;
     border-radius: 8px;
@@ -63,24 +63,30 @@ const SProductCard = styled.div`
     @media ${device.tablet} {
         width: 200px;
         height: 320px;
+        flex-direction: column;
     }
 
     img {
-        width: 100%;
-        height: 0px;
-        flex: 5;
-        border-top-right-radius: 8px;
+        width: 0px;
+        height: 100%;
         border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        flex: 1;
         object-fit: cover;
         object-position: center center;
 
+        
         @media ${device.tablet} {
             flex: 3;
+            width: 100%;
+            height: 0px;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
         }
     }
 
     .description {
-        flex: 4;
+        flex: 1;
         width: 100%;
         height: 100%;
         padding: 0.1rem 0.5rem;
@@ -88,6 +94,7 @@ const SProductCard = styled.div`
         @media ${device.tablet} {
             flex: 2;
         }
+
         .name {
             margin-bottom: 0;
             font-weight: 500;

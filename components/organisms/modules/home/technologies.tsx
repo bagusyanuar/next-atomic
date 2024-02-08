@@ -1,19 +1,21 @@
 import React from 'react'
 import { SectionTitle } from '@/components/atoms/typography'
-import { CategoriesCard } from '@/components/molecules/categories'
-import { device } from '@/components/media'
+import { Technologies } from '@/components/molecules/modules/home'
 import styled from 'styled-components'
+import { device } from '@/components/media'
 
-const Categories = () => {
+interface IProps { className?: string }
+
+const TechnologiesSection = ({className = ''}: IProps) => {
     return (
-        <StyledWrapper>
-            <StyledSectionTitle text='CATEGORY' className='mb-5' />
-            <CategoriesCard />
+        <StyledWrapper className={className}>
+            <StyledSectionTitle text='TECHNOLOGY' />
+            <Technologies />
         </StyledWrapper>
     )
 }
 
-export default Categories
+export default TechnologiesSection
 
 const StyledWrapper = styled.div`
     margin-bottom: 1rem;
